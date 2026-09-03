@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 const giftRoutes = require('./routes/giftRoutes');
+const searchRoutes = require('./routes/searchRoutes');
 app.use('/api/gifts', giftRoutes);
+app.use('/api/search', searchRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
